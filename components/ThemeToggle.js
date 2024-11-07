@@ -37,7 +37,7 @@ const ThemeToggle = () => {
     config: properties.springConfig,
   });
   const centerCircleProps = useSpring({
-    r,
+    r: "6px",
     config: properties.springConfig,
   });
   const maskedCircleProps = useSpring({
@@ -71,7 +71,7 @@ const ThemeToggle = () => {
       <animated.circle
         cx="12"
         cy="12"
-        style={centerCircleProps}
+        style={centerCircleProps }
         fill="black"
         mask="url(#myMask2)"
       />
