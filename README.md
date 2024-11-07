@@ -11,7 +11,7 @@ This project demonstrates how to create an animated dark/light mode toggle in a 
 
 ## Demo
 
-[Include a link to a live demo or GIF of the theme toggle in action]
+[https://chic-torrone-c1fd6a.netlify.app](https://chic-torrone-c1fd6a.netlify.app/)
 
 ## Installation
 
