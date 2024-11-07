@@ -24,7 +24,7 @@ This project demonstrates how to create an animated dark/light mode toggle in a 
 2.  Install dependencies:
 
     ```bash
-    cd your-repo-name
+    cd Animated-Theme-Toggle-with-Next.js-and-React-Spring
     npm install
     ```
 
