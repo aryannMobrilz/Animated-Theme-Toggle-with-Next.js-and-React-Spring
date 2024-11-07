@@ -1,40 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Animated Theme Toggle with Next.js and React Spring
 
-## Getting Started
+This project demonstrates how to create an animated dark/light mode toggle in a Next.js application using React Spring. It's inspired by the example on [jfelix.info](https://jfelix.info/blog/using-react-spring-to-animate-svg-icons-dark-mode-toggle) but adapted for use with `next-themes`.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   Animated transition between sun and moon icons.
+*   Uses `next-themes` for managing the theme.
+*   No custom CSS required (relies on `color-scheme` or `data-theme` attribute).
+*   Smooth and visually appealing animation with React Spring.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+[Include a link to a live demo or GIF of the theme toggle in action]
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+1.  Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    git clone https://github.com/ProgrammerNomad/Animated-Theme-Toggle-with-Next.js-and-React-Spring.git
+    ```
 
-## Learn More
+2.  Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    cd your-repo-name
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  Import the `ThemeToggle` component into your page or layout component:
 
-## Deploy on Vercel
+    ```javascript
+    import ThemeToggle from '../components/ThemeToggle';
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  Render the component:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+    ```javascript
+    export default function Home() {
+      return (
+        <div>
+          {/* ... other content ... */}
+          <ThemeToggle />
+        </div>
+      );
+    }
+    ```
+
+## Configuration
+
+*   This project uses `next-themes` for theme management. Make sure you have it installed and configured in your `pages/_app.js` file:
+
+    ```javascript
+    import { ThemeProvider } from 'next-themes';
+
+    function MyApp({ Component, pageProps }) {
+      return (
+        <ThemeProvider> {/* Or <ThemeProvider attribute="class"> if using data-theme attribute */}
+          <Component {...pageProps} />
+        </ThemeProvider>
+      );
+    }
+
+    export default MyApp;
+    ```
+
+## Customization
+
+*   You can customize the appearance of the sun and moon icons by modifying the SVG code within the `ThemeToggle` component.
+*   Adjust the animation properties in the `properties` object to change the speed, tension, and friction of the animation.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
